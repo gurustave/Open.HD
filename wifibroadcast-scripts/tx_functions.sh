@@ -508,8 +508,13 @@ function tx_function {
 
     if [ "$IsAudioTransferEnabled" == "1" ]; then
         qstatus "Audio enabled" 5
+        
+        amixer cset numid=3 $DefaultAudioOut
+
         /usr/local/share/RemoteSettings/Air/AudioCapture.sh &
         /usr/local/share/RemoteSettings/Air/AudioTX.sh &
+        /usr/local/share/RemoteSettings/Air/AudioPlayback.sh &
+        /usr/local/share/RemoteSettings/Air/RxAudio.sh &
     fi
 
     #

@@ -432,6 +432,8 @@ function rx_function {
 
                 amixer cset numid=3 $DefaultAudioOut
 
+                /usr/local/share/RemoteSettings/Ground/AudioCapture.sh &
+                /usr/local/share/RemoteSettings/Ground/AudioTX.sh &
                 /usr/local/share/RemoteSettings/Ground/AudioPlayback.sh &
                 /usr/local/share/RemoteSettings/Ground/RxAudio.sh &
             fi
